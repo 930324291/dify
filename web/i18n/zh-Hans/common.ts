@@ -561,7 +561,7 @@ const translation = {
       vectorHash: '向量哈希：',
       hitScore: '召回得分：',
     },
-    inputPlaceholder: '和机器人聊天',
+    inputPlaceholder: '有什么可以帮助您',
     thinking: '深度思考中...',
     thought: '已深度思考',
     resend: '重新发送',

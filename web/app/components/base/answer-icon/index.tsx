@@ -5,6 +5,7 @@ import { init } from 'emoji-mart'
 import data from '@emoji-mart/data'
 import classNames from '@/utils/classnames'
 import type { AppIconType } from '@/types/app'
+import { WEB_PREFIX } from '@/config'
 
 init({ data })
 
@@ -39,7 +40,12 @@ const AnswerIcon: FC<AnswerIconProps> = ({
   >
     {isValidImageIcon
       ? <img src={imageUrl} className="h-full w-full rounded-full" alt="answer icon" />
-      : (icon && icon !== '') ? <em-emoji id={icon} /> : <em-emoji id='🤖' />
+      // : (icon && icon !== '') ? <em-emoji id={icon} /> : <em-emoji id='🤖' />
+      : <img
+        src={`${WEB_PREFIX}/logo/logo.png`}
+        className={classNames('block w-[22.651px] h-[24.5px]')}
+        alt='answer icon'
+      />
     }
   </div>
 }

@@ -274,7 +274,7 @@ const Chat: FC<ChatProps> = ({
           </div>
         </div>
         <div
-          className={`absolute ${(!(chatList && chatList.length > 0) ? 'bottom-1/2' : 'bottom-0')} flex justify-center bg-chat-input-mask ${(hasTryToAsk || !noChatInput || !noStopResponding) && chatFooterClassName}`}
+          className={`absolute ${(!((chatList && chatList.length > 0) || (inputsForm && inputsForm.length > 0)) ? 'bottom-[45%]' : 'bottom-0')} flex justify-center bg-chat-input-mask ${(hasTryToAsk || !noChatInput || !noStopResponding) && chatFooterClassName}`}
           ref={chatFooterRef}
         >
           <div
